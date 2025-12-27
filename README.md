@@ -26,13 +26,16 @@ ICBHI-AST-SAM/
 ├── evaluate.py             # Evaluation and Visualization
 ├── requirements.txt        # Dependencies
 └── README.md               # Project documentation
+```text
 
 ```bash
 git clone [https://github.com/Atakanisik/ICBHI-AST-SAM.git](https://github.com/Atakanisik/ICBHI-AST-SAM.git)
 cd ICBHI-AST-SAM
+```bash
 
 ```bash
 pip install -r requirements.txt
+```bash
 
 ##  Dataset Preparation
 
@@ -78,5 +81,6 @@ Evaluate the trained model on the official test set and generate the Confusion M
 python evaluate.py --model_path ./checkpoints/best_model.pth
 
 ⚠️ Note on Reproducibility
+
 
 The results presented in the paper were obtained using mixed-precision (FP16) inference on an NVIDIA Tesla L4 GPU. Due to hardware differences and the non-deterministic nature of some CUDA operations, slight variations (±0.5%) in Sensitivity/Specificity metrics may be observed when retraining from scratch or running on different hardware.
