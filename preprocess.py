@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 DATA_DIR = "./data/ICBHI_final_database"  
 SPLIT_FILE = "./data/ICBHI_Challenge_train_test.txt"
-OUTPUT_FILENAME = "icbhi_ast_16k_8s_metadata.npz"
+OUTPUT_FILENAME = "./data/icbhi_ast_16k_8s_metadata.npz"
 
 TARGET_SR = 16000 
 TARGET_DURATION = 8 

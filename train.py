@@ -1,10 +1,11 @@
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, WeightedRandomSampler
 import numpy as np
 from transformers import ASTFeatureExtractor
 from tqdm import tqdm
-import os
 import argparse
 from sklearn.metrics import confusion_matrix
 
@@ -114,7 +115,7 @@ def train(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train AST model with SAM for ICBHI")
-    parser.add_argument("--data_path", type=str, default="./icbhi_ast_16k_8s_metadata.npz", help="Path to processed .npz file")
+    parser.add_argument("--data_path", type=str, default="./data/icbhi_ast_16k_8s_metadata.npz", help="Path to processed .npz file")
     parser.add_argument("--checkpoint_dir", type=str, default="./checkpoints", help="Directory to save models")
     parser.add_argument("--epochs", type=int, default=20, help="Number of epochs")
     parser.add_argument("--batch_size", type=int, default=8, help="Batch size")

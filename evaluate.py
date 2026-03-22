@@ -1,12 +1,12 @@
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 import torch
-import torch.nn as nn
 from torch.utils.data import DataLoader
 import numpy as np
 from transformers import ASTFeatureExtractor
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import confusion_matrix
-import os
 import argparse
 import gc
 
@@ -129,7 +129,7 @@ def evaluate(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Evaluate AST model for ICBHI")
     
-    parser.add_argument("--data_path", type=str, default="./icbhi_ast_16k_8s_metadata.npz", help="Path to processed .npz file")
+    parser.add_argument("--data_path", type=str, default="./data/icbhi_ast_16k_8s_metadata.npz", help="Path to processed .npz file")
     
     parser.add_argument("--model_path", type=str, default="./checkpoints/best_model.pth", help="Path to trained model (.pth)")
     
