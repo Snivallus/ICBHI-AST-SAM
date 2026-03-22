@@ -17,5 +17,5 @@ rm "$ZIP_FILE"
 
 # 下载训练集 / 测试集分割文件
 URL="https://bhichallenge.med.auth.gr/sites/default/files/ICBHI_final_database/ICBHI_challenge_train_test.txt"
-TEXT_FILE="$DATA_DIR/ICBHI_Challenge_train_test.txt"
+TEXT_FILE="$DATA_DIR/ICBHI_challenge_train_test.txt"
 curl -L -k "$URL" -o "$TEXT_FILE"
