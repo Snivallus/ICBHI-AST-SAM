@@ -104,7 +104,6 @@ def train(args):
 
         print(f"Epoch {epoch+1}: Avg Loss={running_loss/len(train_loader):.4f} | Score={score:.4f} (Se={se:.2f}, Sp={sp:.2f})")
 
-        #
         if score > best_score:
             best_score = score
             save_path = os.path.join(args.checkpoint_dir, "best_model.pth")

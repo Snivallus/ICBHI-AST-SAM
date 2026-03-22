@@ -83,6 +83,17 @@ Evaluate the trained model on the official test set and generate the Confusion M
 ```bash
 python evaluate.py --model_path ./checkpoints/best_model.pth
 ```
+
+4. Inference
+
+Run inference on a single audio file and visualize the predicted class probabilities.
+
+```bash
+python inference.py --model_path ./checkpoints/best_model.pth --wav_path ./data/ICBHI_final_database/103_2b2_Ar_mc_LittC2SE.wav --batch_size 8
+```
+
+## 📊 Results
+
 ⚠️ Note on Reproducibility
 
 
